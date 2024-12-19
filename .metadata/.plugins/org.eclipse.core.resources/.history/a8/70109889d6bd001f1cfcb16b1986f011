@@ -1,0 +1,67 @@
+package com.ab.core.constants;
+
+public class QuizConstants {
+	
+private static final String OS_ROOT = "D:";
+	
+	private static final String CORE_SERVER_PROP_FILE = OS_ROOT + File.separator + "QuizHome" 
+			+ File.separator + "Conf" + File.separator + "CoreServer.prop";
+	
+	public static String ERROR_PREFIX_START;
+	
+	public static String ERROR_PREFIX_END;
+	
+	// These below values are sent to quiz servers and used there start
+	
+	public static boolean GAME_MODE;
+	
+	// When GAME_MODE is 1 means purely money mode, 2 means coins and reimbursement the coins
+	// and 3 means purely coins
+	public static Integer COIN_BUY_RATE = -1;
+	
+	public static Integer COIN_SELL_RATE = -1;
+	
+	public static int TESTMODE;
+	
+	public static boolean MAINTENANCE_MODE;
+	
+	public static String MAINTENANCE_MODE_MSG;
+	
+	// These below values are sent to quiz servers and used there end.
+	
+	public static long MAX_USERS_COUNT;
+	
+	public static Integer MONEY_MODE_CONFIG = -1;
+	
+	public static int SPECIAL_CODE_MAX_COUNT;
+	
+	public static int CURRENT_SERVERS_COUNT;
+	
+	public static long MAX_USERS_PER_SERVER;
+	
+	public static int LOGGED_IN_USERS_COUNT_UPDATE_TIME_INTERVAL;
+	
+	public static long LOGGED_IN_USERS_COUNT_UPDATE_TIME_INTERVAL_IN_MILLIS;
+	
+	public static int MAX_BALANCE_ALLOWED;
+	
+	
+	
+	// Mail properties..
+	
+	public static String FROM_MAIL_ID;
+	
+	public static String VERIFY_MAIL_ID_SUBJECT;
+	
+	public static String VERIFY_MAIL_ID_SENDER_NAME;
+	
+	public static String VERIFY_MAIL_ID_BODY;
+	
+	public static String VERIFY_MAIL_CONTENTS;
+	
+	public static String FORGOT_MAIL_SUBJECT;
+	
+	public static String FORGOT_MAIL_CONTENTS;
+	
+
+}

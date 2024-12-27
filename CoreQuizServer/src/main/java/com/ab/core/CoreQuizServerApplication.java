@@ -1,9 +1,6 @@
 package com.ab.core;
 
 import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,15 +9,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.ab.core.common.LazyScheduler;
 import com.ab.core.constants.QuizConstants;
 import com.ab.core.db.ConnectionPool;
-import com.ab.core.helper.LoggedInUsersCountManager;
-import com.ab.core.helper.WinMsgHandler;
-import com.ab.core.tasks.DeleteGameMoneyCreditedStatus;
-import com.ab.core.tasks.DeleteOldRecords;
-import com.ab.core.tasks.DeleteUselessOTPTask;
-import com.ab.core.tasks.LoggedInUsersCountTask;
 
 @SpringBootApplication
 public class CoreQuizServerApplication implements ApplicationRunner {
@@ -34,7 +24,7 @@ public class CoreQuizServerApplication implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) {
 		
-		logger.info("Starting CoreQuizServerApplication");
+		logger.info("Starting Core QuizServer Application");
 		QuizConstants.initializeProps();
 		
 		try {
@@ -47,7 +37,7 @@ public class CoreQuizServerApplication implements ApplicationRunner {
 		}
 		
 		
-		Calendar calendar = Calendar.getInstance();
+		/*Calendar calendar = Calendar.getInstance();
 		calendar.add(Calendar.DATE, 1);
 		calendar.set(Calendar.HOUR, 3);
 		calendar.set(Calendar.MINUTE, 0);
@@ -73,6 +63,6 @@ public class CoreQuizServerApplication implements ApplicationRunner {
 			LazyScheduler.getInstance().submitRepeatedTask(task, gap, 
 					QuizConstants.LOGGED_IN_USERS_COUNT_UPDATE_TIME_INTERVAL_IN_MILLIS, TimeUnit.MILLISECONDS);
 			gap = gap + gapBetweenServerInstances;
-		}
+		}*/
 	}
 }
